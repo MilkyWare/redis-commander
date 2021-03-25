@@ -29,6 +29,8 @@ jobs:
         # You may pin to the exact commit or the version.
         # uses: anothrNick/github-tag-action@18284c78f6ac68868d5341f57c4f971fb5b7605c
         uses: mathieudutour/github-tag-action@v5.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
         
       - name: Echo tag
         run: echo ${{steps.tag.outputs.version}}
